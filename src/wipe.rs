@@ -19,6 +19,7 @@ pub fn get_params(args: &Args) -> std::io::Result<WipeParams> {
         FolderNameEnum::NodeModules(opts) => ("node_modules", opts.wipe),
         FolderNameEnum::Rust(opts) => ("target", opts.wipe),
         FolderNameEnum::Target(opts) => ("target", opts.wipe),
+        FolderNameEnum::CMake(opts) => ("cmake-build-debug", opts.wipe)
     };
 
     Ok(WipeParams {

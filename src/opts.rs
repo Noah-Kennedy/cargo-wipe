@@ -24,6 +24,9 @@ pub enum FolderNameEnum {
     Target(Opts),
     /// Alias to target
     Rust(Opts),
+    /// Looks for cmake-build-debug
+    #[structopt(name = "cmake")]
+    CMake(Opts),
 }
 
 #[derive(Debug, StructOpt)]
